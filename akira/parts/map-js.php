@@ -183,24 +183,25 @@
         });
 
 
-          var marker = new google.maps.Marker({
-            position: uluru,
-            map: map,
-            // icon: 'img/mark.png'
-          });
+        <?php if(get_field('location', 'option')): ?>
+			<?php while(has_sub_field('location', 'option')): ?>
+				<?php
+					$location = get_sub_field('map');
+					$text = get_sub_field('text');
+					if( !empty($location) ):
+				?>
 
-         var contentString = '<div id="content" class="map__content">'+
-          '<div id="siteNotice">'+
-          '</div>'+
-          '<h4 id="firstHeading" class="firstHeading map__title">Alexandrou Panagouli 1, ofce 101, <br>Larnaca 6057, Novel Tower, Cyprus</span></h4>'+
-          '</div>';
+					var marker = new google.maps.Marker({
+						position: {lat: <?php echo $location['lat']; ?>, lng: <?php echo $location['lng']; ?>},
+						map: map,
+						icon: '<?php echo get_template_directory_uri(); ?>/assets/img/mark.png'
+					});
 
-          var infowindow = new google.maps.InfoWindow({
-                content: contentString
-              });
+				<?php endif; ?>
 
-              infowindow.open(map, marker);
+			<?php endwhile; ?>
+		<?php endif; ?>
 
-          }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmnk4RCDwjSucIJ2WXRnLkuCrsWR4DUM4&callback=initMap"></script>
+      }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmnk4RCDwjSucIJ2WXRnLkuCrsWR4DUM4&callback=initMap"></script>

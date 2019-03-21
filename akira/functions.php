@@ -63,8 +63,6 @@
     ));
 
 
-
-
 //------------------гугл карта API----------------------
     function my_acf_init() {
         
@@ -143,3 +141,68 @@
         if ( isset($echo) )
             echo $args['before_output'] . $echo . $args['after_output'];
     }
+
+//------------------Register Custom Post Статьи----------------------
+    function article_post_type() {
+        $labels = array(
+            'name'                  => _x( 'Блог', 'Post Type General Name', 'text_domain' ),
+            'singular_name'         => _x( 'Блог', 'Post Type Singular Name', 'text_domain' ),
+            'menu_name'             => __( 'Блог', 'text_domain' ),
+            'all_items'             => __( 'Блог', 'text_domain' ),
+            'add_new_item'          => __( 'Добавить статью', 'text_domain' ),
+            'add_new'               => __( 'Добавить статью', 'text_domain' ),
+        );
+        $args = array(
+            'label'                 => __( 'Бренды', 'text_domain' ),
+            'labels'                => $labels,
+            'supports'              => array( 'title', 'editor', 'thumbnail'),// 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+            'hierarchical'          => false,
+            'public'                => true,
+            'show_ui'               => true,
+            'show_in_menu'          => true,
+            'menu_position'         => 4,
+            'menu_icon'             => 'dashicons-images-alt2',
+            'show_in_admin_bar'     => true,
+            'show_in_nav_menus'     => true,
+            'can_export'            => true,
+            'has_archive'           => true,
+            'exclude_from_search'   => false,
+            'publicly_queryable'    => true,
+            'capability_type'       => 'page',
+        );
+        register_post_type( 'article', $args );
+    }
+    add_action( 'init', 'article_post_type', 0 );
+
+
+//------------------Register Custom Post курсы----------------------
+    function curse_post_type() {
+        $labels = array(
+            'name'                  => _x( 'Курсы', 'Post Type General Name', 'text_domain' ),
+            'singular_name'         => _x( 'Курсы', 'Post Type Singular Name', 'text_domain' ),
+            'menu_name'             => __( 'Курсы', 'text_domain' ),
+            'all_items'             => __( 'Курсы', 'text_domain' ),
+            'add_new_item'          => __( 'Добавить курс', 'text_domain' ),
+            'add_new'               => __( 'Добавить курс', 'text_domain' ),
+        );
+        $args = array(
+            'label'                 => __( 'Бренды', 'text_domain' ),
+            'labels'                => $labels,
+            'supports'              => array( 'title'),// 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+            'hierarchical'          => false,
+            'public'                => true,
+            'show_ui'               => true,
+            'show_in_menu'          => true,
+            'menu_position'         => 4,
+            'menu_icon'             => 'dashicons-images-alt2',
+            'show_in_admin_bar'     => true,
+            'show_in_nav_menus'     => true,
+            'can_export'            => true,
+            'has_archive'           => true,
+            'exclude_from_search'   => false,
+            'publicly_queryable'    => true,
+            'capability_type'       => 'page',
+        );
+        register_post_type( 'curse', $args );
+    }
+    add_action( 'init', 'curse_post_type', 0 );

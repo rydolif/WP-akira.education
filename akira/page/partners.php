@@ -4,7 +4,9 @@
 	*/
 ?>
 
-<?php get_header('page'); ?>
+<?php get_header(); ?>
+
+	<?php get_template_part( 'parts/header-page' ); ?>
 
 	<main class="main">
 		<section class="partners blog--content price--content section">

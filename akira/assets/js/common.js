@@ -1,4 +1,164 @@
 $(function() {
+    "use strict";
+
+//-------------------------------isotope---------------------------------------
+  var $grid = $('.course__grid').imagesLoaded( function() {
+    // init Isotope after all images have loaded
+    $grid.isotope({
+      itemSelector: '.item',
+      layoutMode: 'fitRows',
+      getSortData: {
+        name: '.name',
+        symbol: '.symbol',
+        number: '.number parseInt',
+        category: '[data-category]',
+        weight: function( itemElem ) {
+          var weight = $( itemElem ).find('.weight').text();
+          return parseFloat( weight.replace( /[\(\)]/g, '') );
+        }
+      }
+    });
+  });
+
+  // filter functions
+  var filterFns = {
+    ium: function() {
+      var name = $(this).find('.name').text();
+      return name.match( /ium$/ );
+    }
+  };
+
+  // bind filter button click
+  $('.filters--btn').on( 'click', 'button', function() {
+    var filterValue = $( this ).attr('data-filter');
+    // use filterFn if matches value
+    filterValue = filterFns[ filterValue ] || filterValue;
+    $grid.isotope({ filter: filterValue });
+  });
+
+
+  // bind class
+
+    $('#filters--button').on( 'click', 'button', function() {
+      $('.focus').removeClass('focus');
+      $(this).addClass('focus');
+    });
+
+    $('#filters').on( 'click', 'button', function() {
+      $('.hover').removeClass('hover');
+      $(this).addClass('hover');
+    });
+
+
+  // bind filter
+    $('#child').click( function() {
+      $('.child').addClass('visible');
+      $('.parent').addClass('remove');
+      $('.parent').removeClass('visible');
+    });
+
+    $('#parent').click( function() {
+      $('.parent').addClass('visible');
+      $('.child').addClass('remove');
+      $('.child').removeClass('visible');
+    });
+
+
+
+//-------------------------------попандер---------------------------------------
+  $('.modal').popup({transition: 'all 0.3s'});
+
+
+//------------------------------------form-------------------------------------------
+  $('input[type="tel"]').mask('+0 (000) 000-00-00');
+
+  jQuery.validator.addMethod("phoneno", function(phone_number, element) {
+     return this.optional(element) || phone_number.match(/\+[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}/);
+  }, "Введите Ваш телефон");
+
+  $(".form").each(function(index, el) {
+    $(el).addClass('form-' + index);
+
+    $('.form-' + index).validate({
+      rules: {
+        phone: {
+          required: true,
+          phoneno: true
+        },
+        name: 'required',
+      },
+      messages: {
+        name: "Введите Ваше имя",
+        phone: "Введите Ваш телефон",
+        checkbox: "Подтвердить согласие",
+      },
+      submitHandler: function(form) {
+        var t = {
+          name: jQuery('.form-' + index).find("input[name=name]").val(),
+          phone: jQuery('.form-' + index).find("input[name=phone]").val(),
+          checkbox: jQuery('.form-' + index).find("input[name=checkbox]").val(),
+          comment: jQuery('.form-' + index).find("textarea[name=comment]").val(),
+          subject: jQuery('.form-' + index).find("input[name=subject]").val(),
+
+          one1: jQuery('.form-' + index).find("input[name=one1]:checked").val(),
+          one2: jQuery('.form-' + index).find("input[name=one2]:checked").val(),
+          one3: jQuery('.form-' + index).find("input[name=one3]:checked").val(),
+          one4: jQuery('.form-' + index).find("input[name=one4]:checked").val(),
+          one5: jQuery('.form-' + index).find("input[name=one5]:checked").val(),
+          one6: jQuery('.form-' + index).find("input[name=one6]:checked").val(),
+     
+          two1: jQuery('.form-' + index).find("input[name=two1]:checked").val(),
+          two2: jQuery('.form-' + index).find("input[name=two2]:checked").val(),
+          two3: jQuery('.form-' + index).find("input[name=two3]:checked").val(),
+          two4: jQuery('.form-' + index).find("input[name=two4]:checked").val(),
+          two5: jQuery('.form-' + index).find("input[name=two5]:checked").val(),
+          two6: jQuery('.form-' + index).find("input[name=two6]:checked").val(),
+     
+          three1: jQuery('.form-' + index).find("input[name=three1]:checked").val(),
+          three2: jQuery('.form-' + index).find("input[name=three2]:checked").val(),
+          three3: jQuery('.form-' + index).find("input[name=three3]:checked").val(),
+          three4: jQuery('.form-' + index).find("input[name=three4]:checked").val(),
+          three5: jQuery('.form-' + index).find("input[name=three5]:checked").val(),
+          three6: jQuery('.form-' + index).find("input[name=three6]:checked").val(),
+
+          product: jQuery('.form-' + index).find("textarea[name=product]").val(),
+          work: jQuery('.form-' + index).find("textarea[name=work]").val(),
+
+        };
+        ajaxSend('.form-' + index, t);
+      }
+    });
+
+  });
+
+  function ajaxSend(formName, data) {
+    jQuery.ajax({
+      type: "POST",
+      url: "/wp-content/themes/akira/sendmail.php",
+      data: data,
+      success: function() {
+        $(".modal").popup("hide");
+        $("#thanks").popup("show");
+        setTimeout(function() {
+          $(formName).trigger('reset');
+        }, 2000);
+      }
+    });
+  }
+
+//---------------------------franchise--system-----------------------
+  $('.franchise--system__wrap').hide();
+  $('.franchise--system__wrap:first').show();
+  $('.franchise--system__content a:first').addClass('btn btn--franchise');
+   $('.franchise--system__content a').click(function(event){
+    event.preventDefault();
+    $('.franchise--system__content a').removeClass('btn btn--franchise');
+    $(this).addClass('btn btn--franchise');
+    $('.franchise--system__wrap').hide();
+     var selectTab = $(this).attr('href');
+    $(selectTab).fadeIn();
+  });
+
 
 //-------------------------------активна ссилка на якій знаходишся для меню---------------------------------------
   $('nav ul li a').each(function () {
@@ -41,46 +201,11 @@ $(function() {
     }
   });
 
-//-------------------------------isotope---------------------------------------
-  var $grid = $('.course__grid').imagesLoaded( function() {
-    // init Isotope after all images have loaded
-    $grid.isotope({
-      itemSelector: '.item',
-      layoutMode: 'fitRows',
-      getSortData: {
-        name: '.name',
-        symbol: '.symbol',
-        number: '.number parseInt',
-        category: '[data-category]',
-        weight: function( itemElem ) {
-          var weight = $( itemElem ).find('.weight').text();
-          return parseFloat( weight.replace( /[\(\)]/g, '') );
-        }
-      }
-    });
-  });
-
-  // filter functions
-  var filterFns = {
-    ium: function() {
-      var name = $(this).find('.name').text();
-      return name.match( /ium$/ );
-    }
-  };
-
-  // bind filter button click
-  $('.filters').on( 'click', 'button', function() {
-    var filterValue = $( this ).attr('data-filter');
-    // use filterFn if matches value
-    filterValue = filterFns[ filterValue ] || filterValue;
-    $grid.isotope({ filter: filterValue });
-  });
-
-
 
 //------------------------------slider-hero-----------------------------
   $("#coverflow").flipster({
     style: 'flat',
+    autoplay: 4000,
     loop: true,
     start: 'center',
     scrollwheel: false,
@@ -155,49 +280,34 @@ $(function() {
     dots: true,
     arrows: false,
     centerMode: true,
-    // responsive: [
-    //   {
-    //     breakpoint: 768,
-    //     settings: {
-    //       arrows: false,
-    //       centerMode: true,
-    //       centerPadding: '40px',
-    //       slidesToShow: 3
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 480,
-    //     settings: {
-    //       arrows: false,
-    //       centerMode: true,
-    //       centerPadding: '40px',
-    //       slidesToShow: 1
-    //     }
-    //   }
-    // ]
   });
 
 //------------------------------slider-opros-----------------------------
-  var swiper = new Swiper('.swiper-container', {
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (index + 1) + '</span>';
-      },
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    effect: 'fade',
-  });
+    // var swiper = new Swiper('.swiper-container', {
+    //    pagination: {
+    //      el: '.swiper-pagination',
+    //      clickable: true,
+    //      renderBullet: function (index, className) {
+    //        return '<span class="' + className + '">' + (index + 1) + '</span>';
+    //      },
+    //    },
+    //    navigation: {
+    //      nextEl: '.swiper-button-next',
+    //      prevEl: '.swiper-button-prev',
+    //    },
+    //    effect: 'fade',
+    //  });
+
+    $('#opros').click( function(e){
+      swiper.update();
+    });
+
 
 //------------------------------slider-curse--work-----------------------------
   $('.curse--work__slider').slick({
     slidesToShow: 3,
     dots: true,
-    arrows: false,
+    // arrows: false,
     responsive: [
       {
         breakpoint: 992,
@@ -242,57 +352,6 @@ $(function() {
     $('header').toggleClass('header--menu');
   });
 
-//-------------------------------попандер---------------------------------------
-  $('.modal').popup({transition: 'all 0.3s'});
-
-//------------------------------------form-------------------------------------------
-  $('input[type="tel"]').mask('+0 (000) 000-00-00');
-
-  jQuery.validator.addMethod("phoneno", function(phone_number, element) {
-     return this.optional(element) || phone_number.match(/\+[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}/);
-  }, "Введите Ваш телефон");
-
-  $(".form").each(function(index, el) {
-    $(el).addClass('form-' + index);
-
-    $('.form-' + index).validate({
-      rules: {
-        phone: {
-          required: true,
-          phoneno: true
-        },
-        name: 'required',
-      },
-      messages: {
-        name: "Введите Ваше имя",
-        phone: "Введите Ваш телефон",
-      },
-      submitHandler: function(form) {
-        var t = {
-          name: jQuery('.form-' + index).find("input[name=name]").val(),
-          phone: jQuery('.form-' + index).find("input[name=phone]").val(),
-          subject: jQuery('.form-' + index).find("input[name=subject]").val()
-        };
-        ajaxSend('.form-' + index, t);
-      }
-    });
-
-  });
-
-  function ajaxSend(formName, data) {
-    jQuery.ajax({
-      type: "POST",
-      url: "sendmail.php",
-      data: data,
-      success: function() {
-        $(".modal").popup("hide");
-        $("#thanks").popup("show");
-        setTimeout(function() {
-          $(formName).trigger('reset');
-        }, 2000);
-      }
-    });
-  }
 
 //----------------------------------------fixed----------------------------------
   $(window).scroll(function(){
@@ -310,65 +369,8 @@ $(function() {
       var id  = $(this).attr('href'),
           top = $(id).offset().top;
       $('body,html').animate({scrollTop: top - 60}, 'slow', 'swing');
-  //--------------------закриття меню при кліку на ссилку якоря--------------------
-     // $('.hamburger').removeClass('hamburger--active');
-     // $('.header-menu').removeClass('header-menu');
-     // $('.header--active').removeClass('header--active');
-     // $('.nav--active').removeClass('nav--active');
   });
 
-  // //-------------------------------анімація цифр---------------------------------------
-  //   var show = true;
-  //   var countbox = ".about-statistics__container";
-  //   $(window).on("scroll load resize", function () {
-  //       if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
-  //       var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
-  //       var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
-  //       var w_height = $(window).height(); // Высота окна браузера
-  //       var d_height = $(document).height(); // Высота всего документа
-  //       var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
-  //       if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
-  //           $('.about-statistics__item h3').spincrement({
-  //               thousandSeparator: "",
-  //               duration: 2000
-  //           });
-  //           show = false;
-  //       }
-  //   });
-
-  // //----------------------------wowJS-------------------------------
-  //   var wow = new WOW(
-  //     {
-  //       boxClass:     'wow',      // animated element css class (default is wow)
-  //       animateClass: 'animated', // animation css class (default is animated)
-  //       offset:       0,          // distance to the element when triggering the animation (default is 0)
-  //       mobile:       true,       // trigger animations on mobile devices (default is true)
-  //       live:         true,       // act on asynchronously loaded content (default is true)
-  //       callback:     function(box) {
-  //         // the callback is fired every time an animation is started
-  //         // the argument that is passed in is the DOM node being animated
-  //       },
-  //       scrollContainer: null // optional scroll container selector, otherwise use window
-  //     }
-  //   );
-  //   wow.init();
-  
-  // //-------------------------------parallax---------------------------------------
-  //   $(window).scroll(function() {
-  //     var parallax = $(this).scrollTop();
-  //     $('.parallax').css({
-  //       'transform' : 'translate(0%, ' + parallax/10 + '%)'
-  //     });
-  //   });
-
-  // //-------------------------------активна ссилка на якій знаходишся для меню---------------------------------------
-  // $('.nav ul li a').each(function () {
-  //     var location = window.location.href;
-  //     var link = this.href; 
-  //     if(location == link) {
-  //         $(this).addClass('active');
-  //     }
-  // });
 });
 
 //----------------------------------------preloader----------------------------------
@@ -376,63 +378,3 @@ $(function() {
   $(window).on('load', function(){
     $('.preloader').delay(2500).fadeOut('slow');
   });
-
-
-// //--------------------------------------icon----------------------------------------
-//   ;( function( window, document )
-//     {
-//       'use strict';
-
-//       var file     = '/wp-content/themes/akira/img/symbols.html',
-//           revision = 1.9;
-
-//       if( !document.createElementNS || !document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )
-//           return true;
-
-//       var isLocalStorage = 'localStorage' in window && window[ 'localStorage' ] !== null,
-//           request,
-//           data,
-//           insertIT = function()
-//           {
-//               document.body.insertAdjacentHTML( 'afterbegin', data );
-//           },
-//           insert = function()
-//           {
-//               if( document.body ) insertIT();
-//               else document.addEventListener( 'DOMContentLoaded', insertIT );
-//           };
-
-//       if( isLocalStorage && localStorage.getItem( 'inlineSVGrev' ) == revision )
-//       {
-//         data = localStorage.getItem( 'inlineSVGdata' );
-//         if( data )
-//         {
-//             insert();
-//             return true;
-//         }
-//       }
-
-//       try
-//       {
-//         request = new XMLHttpRequest();
-//         request.open( 'GET', file, true );
-//         request.onload = function()
-//           {
-//             if( request.status >= 200 && request.status < 400 )
-//               {
-//                 data = request.responseText;
-//                 insert();
-//                 if( isLocalStorage )
-//                 {
-//                   localStorage.setItem( 'inlineSVGdata',  data );
-//                   localStorage.setItem( 'inlineSVGrev',   revision );
-//                 }
-//             }
-//         }
-//         request.send();
-//       }
-//       catch( e ){}
-
-//     }
-//   ( window, document ) );
-

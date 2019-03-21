@@ -1,4 +1,32 @@
 
+<!-- заказать -->
+<div class="modal" id="order">
+	<div class="wrapper">
+		<form action="sendmail.php" class="form" method="post">
+
+			<button class="close order_close" type="button"></button>
+
+			<h3>Заполните форму и наш специалист свяжется с Вами.</h3>
+			<input type="hidden" name="subject" value="Заказать дзвонок">
+
+			<div class="modal__line">
+				<input type="text" name="name" placeholder="Введите Ваше имя" required>
+			</div>
+			<div class="modal__line">
+				<input type="tel" name="phone" required placeholder="Введите ваш телефон">
+			</div>
+			<div class="modal__line--checkbox">
+				<input type="checkbox" name="checkbox" id="checkbox1" value="" required>
+				<label for="checkbox1">Я принимаю и даю согласие на храниние и обработку персональных данных </label>
+			</div>
+			<div class="modal__line">
+				<button type="submit" class="btn" name="submit">Отправить</button>
+			</div>
+
+		</form>
+	</div>
+</div>
+
 <!-- консультация -->
 <div class="modal" id="sing">
 	<div class="wrapper">
@@ -16,11 +44,11 @@
 				<input type="tel" name="phone" required placeholder="Введите ваш телефон">
 			</div>
 			<div class="modal__line--textarea">
-				<textarea name="textarea" id="textarea" placeholder="Напишите Ваш вопрос"></textarea>
+				<textarea name="comment" id="textarea" placeholder="Напишите Ваш вопрос"></textarea>
 			</div>
 			<div class="modal__line--checkbox">
-				<input type="checkbox" name="checkbox" id="checkbox" value="">
-				<label for="checkbox">Я принимаю и даю согласие на храниние и обработку персональных данных </label>
+				<input type="checkbox" name="checkbox" id="checkbox2" value="" required>
+				<label for="checkbox2">Я принимаю и даю согласие на храниние и обработку персональных данных </label>
 			</div>
 			<div class="modal__line">
 				<button type="submit" class="btn" name="submit">Отправить</button>
@@ -30,15 +58,155 @@
 	</div>
 </div>
 
-<!-- Обучаем детей и проводим олимпиады -->
-<div class="modal" id="sing">
+<!-- Обучаем -->
+<div class="modal" id="training">
 	<div class="wrapper">
 		<form action="sendmail.php" class="form" method="post">
 
-			<button class="close sing_close" type="button"></button>
+			<button class="close training_close" type="button"></button>
+
+			<h3>Записаться на обучение</h3>
+			<input type="hidden" name="subject" value="Записаться з главной страницы">
+
+			<div class="modal__line">
+				<input type="text" name="name" placeholder="Введите Ваше имя" required>
+			</div>
+			<div class="modal__line">
+				<input type="tel" name="phone" required placeholder="Введите ваш телефон">
+			</div>
+			<div class="modal__line--checkbox">
+				<input type="checkbox" name="checkbox" id="checkbox3" value="" required>
+				<label for="checkbox3">Я принимаю и даю согласие на храниние и обработку персональных данных </label>
+			</div>
+			<div class="modal__line">
+				<button type="submit" class="btn" name="submit">Отправить</button>
+			</div>
+
+		</form>
+	</div>
+</div>
+
+<!-- Презентация -->
+<div class="modal" id="presentation">
+	<div class="wrapper">
+		<form action="sendmail.php" class="form" method="post">
+
+			<button class="close presentation_close" type="button"></button>
+
+			<h3>получить презентацию</h3>
+			<input type="hidden" name="subject" value="Получить презентацию">
+
+			<div class="modal__line">
+				<input type="text" name="name" placeholder="Введите Ваше имя" required>
+			</div>
+			<div class="modal__line">
+				<input type="tel" name="phone" required placeholder="Введите ваш телефон">
+			</div>
+			<div class="modal__line--checkbox">
+				<input type="checkbox" name="checkbox" id="checkbox4" value="" required>
+				<label for="checkbox4">Я принимаю и даю согласие на храниние и обработку персональных данных </label>
+			</div>
+			<div class="modal__line">
+				<button type="submit" class="btn" name="submit">Отправить</button>
+			</div>
+
+		</form>
+	</div>
+</div>
+
+<!-- Почта -->
+<div class="modal" id="modal-mail">
+	<div class="wrapper">
+		<form action="sendmail.php" class="form" method="post">
+
+			<button class="close modal-mail_close" type="button"></button>
+
+			<h3>Оставьте свой email <br>И ПОЛУЧИТЕ ПОДАРОК ОТ AKIRA EDUCATION!</h3>
+			<input type="hidden" name="subject" value="Получить презентацию">
+
+			<div class="modal__line">
+				<input type="text" name="name" placeholder="Введите Ваше имя" required>
+			</div>
+			<div class="modal__line">
+				<input type="tel" name="phone" required placeholder="Введите ваш телефон">
+			</div>
+			<div class="modal__line--checkbox">
+				<input type="checkbox" name="checkbox" id="checkbox5" value="" required>
+				<label for="checkbox5">Я принимаю и даю согласие на храниние и обработку персональных данных </label>
+			</div>
+			<div class="modal__line">
+				<button type="submit" class="btn" name="submit">Отправить</button>
+			</div>
+
+		</form>
+	</div>
+</div>
+
+<!-- Заявка -->
+<div class="modal" id="request">
+	<div class="wrapper">
+		<form action="sendmail.php" class="form" method="post">
+
+			<button class="close request_close" type="button"></button>
+
+			<h3>Оставьте заявку</h3>
+			<input type="hidden" name="subject" value="Оставьте заявку">
+
+			<div class="modal__line">
+				<input type="text" name="name" placeholder="Введите Ваше имя" required>
+			</div>
+			<div class="modal__line">
+				<input type="tel" name="phone" required placeholder="Введите ваш телефон">
+			</div>
+			<div class="modal__line--checkbox">
+				<input type="checkbox" name="checkbox" id="checkbox6" value="" required>
+				<label for="checkbox6">Я принимаю и даю согласие на храниние и обработку персональных данных </label>
+			</div>
+			<div class="modal__line">
+				<button type="submit" class="btn" name="submit">Отправить</button>
+			</div>
+
+		</form>
+	</div>
+</div>
+
+<!-- Заявка franchise -->
+<div class="modal" id="request-franchise">
+	<div class="wrapper">
+		<form action="sendmail.php" class="form" method="post">
+
+			<button class="close request-franchise_close" type="button"></button>
+
+			<h3>Оставьте заявку<br> на франшизу</h3>
+			<input type="hidden" name="subject" value="Оставьте заявку">
+
+			<div class="modal__line">
+				<input type="text" name="name" placeholder="Введите Ваше имя" required>
+			</div>
+			<div class="modal__line">
+				<input type="tel" name="phone" required placeholder="Введите ваш телефон">
+			</div>
+			<div class="modal__line--checkbox">
+				<input type="checkbox" name="checkbox" id="checkbox7" value="" required>
+				<label for="checkbox7">Я принимаю и даю согласие на храниние и обработку персональных данных </label>
+			</div>
+			<div class="modal__line">
+				<button type="submit" class="btn" name="submit">Отправить</button>
+			</div>
+
+		</form>
+	</div>
+</div>
+
+<!-- франшиза -->
+<div class="modal" id="order-franchise">
+	<div class="wrapper">
+		<form action="sendmail.php" class="form" method="post">
+
+			<button class="close order-franchise_close" type="button"></button>
 
 			<h3>Заполните форму и наш специалист свяжется с Вами для консультации.</h3>
-			<input type="hidden" name="subject" value="Консультация">
+			<input type="hidden" name="subject" value="Франшиза">
 
 			<div class="modal__line">
 				<input type="text" name="name" placeholder="Введите Ваше имя" required>
@@ -47,11 +215,11 @@
 				<input type="tel" name="phone" required placeholder="Введите ваш телефон">
 			</div>
 			<div class="modal__line--textarea">
-				<textarea name="textarea" id="textarea" placeholder="Напишите Ваш вопрос"></textarea>
+				<textarea name="comment" id="textarea" placeholder="Напишите Ваш вопрос"></textarea>
 			</div>
 			<div class="modal__line--checkbox">
-				<input type="checkbox" name="checkbox" id="checkbox" value="">
-				<label for="checkbox">Я принимаю и даю согласие на храниние и обработку персональных данных </label>
+				<input type="checkbox" name="checkbox" id="checkbox8" value="" required>
+				<label for="checkbox8">Я принимаю и даю согласие на храниние и обработку персональных данных </label>
 			</div>
 			<div class="modal__line">
 				<button type="submit" class="btn" name="submit">Отправить</button>
@@ -61,103 +229,7 @@
 	</div>
 </div>
 
-<!-- Опрос -->
-<div class="modal modal--opros" id="opros">
-	<div class="wrapper">
-		<form action="sendmail.php" class="form" method="post">
 
-			<button class="close opros_close" type="button"></button>
-			<input type="hidden" name="subject" value="Опрос">
+<?php get_template_part( 'parts/modal-opros' ); ?>
 
-			<div class="modal--opros__slider swiper-container">
-				<div class="swiper-wrapper">
-					<div class="modal--opros__item swiper-slide">
-						<h3>Пройдите опрос <b>и получите купон на скидку!!!</b></h3>
-
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam?
-						</p>
-						<div class="modal--opros__line">
-							<div class="modal__line--checkbox">
-								<input type="checkbox" name="checkbox" id="checkbox0" value="" checked="checked">
-								<label for="checkbox0">Lorem ipsum dolor sit amet, consectetur .</label>
-							</div>
-						</div>
-						<div class="modal__line--checkbox">
-							<input type="checkbox" name="checkbox" id="checkbox1" value="">
-							<label for="checkbox1">Lorem ipsum dolor sit amet, consectetur .</label>
-						</div>
-						<div class="modal--opros__line">
-							<div class="modal__line--checkbox">
-								<input type="checkbox" name="checkbox" id="checkbox2" value="">
-								<label for="checkbox2">Lorem ipsum dolor sit amet, consectetur .</label>
-							</div>
-						</div>
-						<div class="modal__line--checkbox">
-							<input type="checkbox" name="checkbox" id="checkbox3" value="">
-							<label for="checkbox3">Lorem ipsum dolor sit amet, consectetur .</label>
-						</div>
-					</div>
-					<div class="modal--opros__item swiper-slide">
-						<h3>Пройдите опрос <b>и получите купон на скидку!!!</b></h3>
-
-					 	<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam?
-						</p>
-						<div class="modal--opros__line">
-							<div class="modal__line--radio">
-								<input type="radio" name="radio" id="radio0" value="" checked="checked">
-								<label for="radio0">Lorem ipsum dolor sit amet, consectetur .</label>
-							</div>
-						</div>
-						<div class="modal__line--radio">
-							<input type="radio" name="radio" id="radio1" value="">
-							<label for="radio1">Lorem ipsum dolor sit amet, consectetur .</label>
-						</div>
-						<div class="modal--opros__line">
-							<div class="modal__line--radio">
-								<input type="radio" name="radio" id="radio2" value="">
-								<label for="radio2">Lorem ipsum dolor sit amet, consectetur .</label>
-							</div>
-						</div>
-						<div class="modal__line--radio">
-							<input type="radio" name="radio" id="radio3" value="">
-							<label for="radio3">Lorem ipsum dolor sit amet, consectetur .</label>
-						</div>
-					</div>
-					<div class="modal--opros__item--final modal--opros__item swiper-slide">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/question-decor.png" alt="" class="modal--opros__item--final_man">
-					 	<h2>Поздравляем! <span>Вы успешно прошли тест!</span></h2>
-					 	<h4>
-					 		Чтобы получить скидку  - оставьте свои контактные данные, мы свяжемся с вами в течение дня
-					 	</h4>
-						<div class="modal__line">
-							<input type="text" name="name" placeholder="Введите Ваше имя" required>
-						</div>
-						<div class="modal__line">
-							<input type="tel" name="phone" required placeholder="Введите ваш телефон">
-						</div>
-						<div class="modal__line">
-							<button type="submit" class="btn" name="submit">получить скидку <span><svg><use xlink:href="http://localhost/akira/wp-content/plugins/svg-spritemap/defs.svg#:arrow"></use></svg></span></button>
-						</div>
-					</div>
-				</div>
-				<!-- Add Pagination -->
-				<div class="swiper-pagination"></div>
-				<!-- Add Arrows -->
-				<div class="swiper-button-next"></div>
-				<div class="swiper-button-prev"></div>
-				<span class="text">Вопрос:</span>
-			</div>
-
-		</form>
-	</div>
-</div>
-
-<!-- Благодарность -->
-<div class="modal" id="thanks">
-	<button class="close thanks_close" type="button"></button>
-
-	<h3>Спасибо <br>за доверие!</h3>
-	<p>Мы обязательно с вами свяжемся!</p>
-</div>
+<?php get_template_part( 'parts/modal-thanks' ); ?>

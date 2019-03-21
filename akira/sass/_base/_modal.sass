@@ -1,0 +1,209 @@
+.modal
+	position: relative
+	max-width: 570px
+	width: 100%
+	height: auto
+	padding: 70px 115px 90px
+	background-color: #fff
+	z-index: 1
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.29)
+	border-radius: 20px
+
+	h3
+		color: $light
+		font-size: 14px
+		text-transform: uppercase
+		line-height: 1.1
+		margin-bottom: 40px
+
+	&__line
+		position: relative
+		margin-bottom: 25px
+		&:last-child
+			margin-bottom: 0
+
+		&--textarea
+			margin-bottom: 40px
+
+		&--checkbox
+			margin-bottom: 40px
+
+			label
+				position: relative
+				padding-left: 20px
+				cursor: pointer
+				line-height: 1.6
+				
+				&::before,
+				&::after
+					content: ''
+					position: absolute
+					left: 0
+					top: 5px
+					border-radius: 50%
+
+				&::before
+					width: 12px
+					height: 12px
+					border: 1px solid #b7b7b7
+
+				&::after
+					transform: scale(0)
+					left: 3px
+					top: 8px
+					width: 6px
+					height: 6px
+					background: $light
+					transition: all .2s
+
+			input[type="checkbox"]
+				display: none
+
+			input[type="checkbox"]:checked + label::after
+				transform: scale(1)
+
+		&--radio
+			margin-bottom: 40px
+
+			label
+				position: relative
+				padding-left: 20px
+				cursor: pointer
+				line-height: 1.6
+				
+				&::before,
+				&::after
+					content: ''
+					position: absolute
+					left: 0
+					top: 5px
+					border-radius: 50%
+
+				&::before
+					width: 12px
+					height: 12px
+					border: 1px solid #b7b7b7
+
+				&::after
+					transform: scale(0)
+					left: 3px
+					top: 8px
+					width: 6px
+					height: 6px
+					background: $light
+					transition: all .2s
+
+			input[type="radio"]
+				display: none
+
+			input[type="radio"]:checked + label::after
+				transform: scale(1)
+
+	&--opros
+		padding: 50px 210px 70px
+		max-width: 1170px
+
+		p
+			font-weight: 500
+			margin-bottom: 70px
+
+		&__line
+			width: 45%
+
+		&__item
+			position: relative
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+			margin-bottom: 70px
+			background: #fff
+
+			&--final
+				display: flex
+				flex-direction: column
+				background: #fff
+				margin-bottom: 0
+				z-index: 2
+				padding-left: 150px
+
+				h2
+					font-size: 24px
+					color: $light
+					margin-bottom: 35px
+
+					span
+						text-transform: none
+
+				h4
+					line-height: 18px
+					color: #081719
+					margin-bottom: 35px
+					font-size: 24px
+					font-weight: 500
+					line-height: 1.2
+
+				&_man
+					position: absolute
+					left: 0
+					bottom: 0
+					height: 90%
+
+				.modal__line
+					max-width: 340px
+					width: 100%
+					display: inherit
+					margin: 0 auto 25px
+
+	
+	.text
+		position: absolute
+		left: 0
+		bottom: 10px
+		color: #4cddee
+		font-size: 24px
+		font-weight: 300
+		margin-bottom: 0
+
+	.btn
+		width: 100%
+		background: $light
+		height: 45px
+		line-height: 45px
+		color: #fff
+		padding: 0
+
+	.close
+		position: absolute
+		right: -13px
+		top: -13px
+		display: block
+		width: 30px
+		height: 30px
+		box-shadow: 0 0 8px rgba(0, 0, 0, 0.33)
+		background-color: #ffffff
+		border-radius: 50%
+		border: none
+		cursor: pointer
+		z-index: 3
+
+		&:hover, &:focus
+			outline: none
+
+			&::before,
+			&::after
+				height: 14px
+
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			height: 12px
+			width: 2px
+			background: #000
+			transition: all .3s
+
+		&::before
+			transform: translate(-50%, -50%) rotate(45deg)
+
+		&::after
+			transform: translate(-50%, -50%) rotate(-45deg)

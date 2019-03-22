@@ -26,6 +26,7 @@
 								$price = get_sub_field('price');
 								$time = get_sub_field('time');
 								$text = get_sub_field('text');
+								$program = get_sub_field('program');
 
 								?>
 									<div class="price--content__item">
@@ -36,6 +37,19 @@
 										<div class="price--content__item_main">
 											<div class="price--content__item_main--price"><?php echo $price; ?></div>
 											<?php echo $text; ?>
+
+											<div class="box">
+												<div class="box__header">
+													<span></span>
+													<p><b>Программа курса</b></p>
+												</div>
+												<div class="box__content">
+												  <p>
+													<?php echo $program; ?>
+												  </p>
+												</div>
+											</div>
+
 											<a href="<?php echo $link; ?>" class="btn btn--franchise"  target="_blank">купить <b></b></a>
 										</div>
 									</div>

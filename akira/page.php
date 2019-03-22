@@ -547,13 +547,25 @@
 				<a href="<?php echo get_home_url(); ?>/parnery" class="btn btn--franchise" target="_blank">Все партнеры</a>
 			</div>
 
-			<div class="partners__slider">
-				<div class="partners__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/partners1.jpg" alt=""></div>
-				<div class="partners__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/partners2.jpg" alt=""></div>
-				<div class="partners__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/partners3.jpg" alt=""></div>
-				<div class="partners__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/partners4.jpg" alt=""></div>
-				<div class="partners__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/partners3.jpg" alt=""></div>
-			</div>
+			<?php if( have_rows('partners') ): ?>
+
+				<div class="partners__slider">
+
+				<?php while( have_rows('partners') ): the_row(); 
+
+					$image = get_sub_field('img');
+
+					?>
+					
+						<div class="partners__item">
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>">
+						</div>
+
+				<?php endwhile; ?>
+
+				</div>
+			<?php endif; ?>
+			
 		</div>
 	</section>
 	

@@ -248,52 +248,6 @@
 
 		<?php endif; ?>
 
-
-<!-- 
-				<div class="team__slide">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/team1.png" alt="">
-					<p>
-						<b class="team__name">Кудряшова Любовь</b>
-						<span class="team__text">руководитель методического блока, партнёр IA "Akira Education", директор центров </span>
-					</p>
-				</div>
-
-				<div class="team__slide">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/team2.jpg" alt="">
-					<p>
-						<b class="team__name">Савостьянова Наталья</b>
-						<span class="team__text">практикующий тренер-методист, партнёр IA "Akira Education",  директор центров, психолог</span>
-					</p>
-				</div>
-				<div class="team__slide">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/team3.jpg" alt="">
-					<p>
-						<b class="team__name">Селивёрстова Дарья</b>
-						<span class="team__text">практикующий тренер-методист, профессиональный художник</span>
-					</p>
-				</div>
-				<div class="team__slide">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/team4.jpg" alt="">
-					<p>
-						<b class="team__name">Гомолко Юлия</b>
-						<span class="team__text">руководитель блока продаж, практикующий педагог</span>
-					</p>
-				</div>
-				<div class="team__slide">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/team6.png" alt="">
-					<p>
-						<b class="team__name">Араспаева Алена</b>
-						<span class="team__text">руководитель блока обеспечения материалами, сертифицированный менеджер по качеству.</span>
-					</p>
-				</div>
-				<div class="team__slide">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/team5.png" alt="">
-					<p>
-						<b class="team__name">Ахметжанова Меруерт</b>
-						<span class="team__text">методист, магистр MBA, практикующий тренер.</span>
-					</p>
-				</div> -->
-
 		</div>
 	</section>
 

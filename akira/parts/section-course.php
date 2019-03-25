@@ -26,7 +26,7 @@
 			</div>
 
 			<div class="filters filters--btn button-group child" id="filters">
-				<p>обучать учеников <br>методики:</p>
+				<p>обучать учеников <br>методике:</p>
 
 				<div>
 					<button class="button" data-filter=".mental">ментальная арифметика</button>
@@ -38,7 +38,7 @@
 			</div>
 
 			<div class="filters filters--btn button-group parent" id="filters">
-				<p>обучать взрослых <br>методики:</p>
+				<p>обучать взрослых <br>методике:</p>
 
 				<div>
 					<button class="button" data-filter=".mental-parent">ментальная арифметика</button>
@@ -68,7 +68,7 @@
 						<div  class="course__grid_text">
 							<p><?php echo $text; ?></p>
 						</div>
-						<a href="<?php echo $link; ?>" class="btn">Купить <span><svg><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:arrow"></use></svg></span></a>
+						<a href="<?php echo $link; ?>" class="btn">Подробнее <span><svg><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:arrow"></use></svg></span></a>
 					</div>
 				</div>
 

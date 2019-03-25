@@ -15,9 +15,12 @@
 			<div class="modal__line">
 				<input type="tel" name="phone" required placeholder="Введите ваш телефон">
 			</div>
+			<div class="modal__line">
+				<input type="email" name="mail" required placeholder="Введите вашу почту">
+			</div>
 			<div class="modal__line--checkbox">
 				<input type="checkbox" name="checkbox" id="checkbox1" value="" required>
-				<label for="checkbox1">Я принимаю и даю согласие на храниние и обработку персональных данных </label>
+				<label for="checkbox1">Принимаю политику конфиденциальности и даю согласие на хранение и обработку персональных данных </label>
 			</div>
 			<div class="modal__line">
 				<button type="submit" class="btn" name="submit">Отправить</button>
@@ -43,12 +46,15 @@
 			<div class="modal__line">
 				<input type="tel" name="phone" required placeholder="Введите ваш телефон">
 			</div>
+			<div class="modal__line">
+				<input type="email" name="mail" required placeholder="Введите вашу почту">
+			</div>
 			<div class="modal__line--textarea">
 				<textarea name="comment" id="textarea" placeholder="Напишите Ваш вопрос"></textarea>
 			</div>
 			<div class="modal__line--checkbox">
 				<input type="checkbox" name="checkbox" id="checkbox2" value="" required>
-				<label for="checkbox2">Я принимаю и даю согласие на храниние и обработку персональных данных </label>
+				<label for="checkbox2">Принимаю политику конфиденциальности и даю согласие на хранение и обработку персональных данных </label>
 			</div>
 			<div class="modal__line">
 				<button type="submit" class="btn" name="submit">Отправить</button>
@@ -74,9 +80,12 @@
 			<div class="modal__line">
 				<input type="tel" name="phone" required placeholder="Введите ваш телефон">
 			</div>
+			<div class="modal__line">
+				<input type="email" name="mail" required placeholder="Введите вашу почту">
+			</div>
 			<div class="modal__line--checkbox">
 				<input type="checkbox" name="checkbox" id="checkbox3" value="" required>
-				<label for="checkbox3">Я принимаю и даю согласие на храниние и обработку персональных данных </label>
+				<label for="checkbox3">Принимаю политику конфиденциальности и даю согласие на хранение и обработку персональных данных </label>
 			</div>
 			<div class="modal__line">
 				<button type="submit" class="btn" name="submit">Отправить</button>
@@ -93,7 +102,7 @@
 
 			<button class="close presentation_close" type="button"></button>
 
-			<h3>получить презентацию</h3>
+			<h3>Получить презентацию</h3>
 			<input type="hidden" name="subject" value="Получить презентацию">
 
 			<div class="modal__line">
@@ -102,9 +111,12 @@
 			<div class="modal__line">
 				<input type="tel" name="phone" required placeholder="Введите ваш телефон">
 			</div>
+			<div class="modal__line">
+				<input type="email" name="mail" required placeholder="Введите вашу почту">
+			</div>
 			<div class="modal__line--checkbox">
 				<input type="checkbox" name="checkbox" id="checkbox4" value="" required>
-				<label for="checkbox4">Я принимаю и даю согласие на храниние и обработку персональных данных </label>
+				<label for="checkbox4">Принимаю политику конфиденциальности и даю согласие на хранение и обработку персональных данных </label>
 			</div>
 			<div class="modal__line">
 				<button type="submit" class="btn" name="submit">Отправить</button>
@@ -130,9 +142,12 @@
 			<div class="modal__line">
 				<input type="tel" name="phone" required placeholder="Введите ваш телефон">
 			</div>
+			<div class="modal__line">
+				<input type="email" name="mail" required placeholder="Введите вашу почту">
+			</div>
 			<div class="modal__line--checkbox">
 				<input type="checkbox" name="checkbox" id="checkbox5" value="" required>
-				<label for="checkbox5">Я принимаю и даю согласие на храниние и обработку персональных данных </label>
+				<label for="checkbox5">Принимаю политику конфиденциальности и даю согласие на хранение и обработку персональных данных </label>
 			</div>
 			<div class="modal__line">
 				<button type="submit" class="btn" name="submit">Отправить</button>
@@ -158,9 +173,12 @@
 			<div class="modal__line">
 				<input type="tel" name="phone" required placeholder="Введите ваш телефон">
 			</div>
+			<div class="modal__line">
+				<input type="email" name="mail" required placeholder="Введите вашу почту">
+			</div>
 			<div class="modal__line--checkbox">
 				<input type="checkbox" name="checkbox" id="checkbox6" value="" required>
-				<label for="checkbox6">Я принимаю и даю согласие на храниние и обработку персональных данных </label>
+				<label for="checkbox6">Принимаю политику конфиденциальности и даю согласие на хранение и обработку персональных данных </label>
 			</div>
 			<div class="modal__line">
 				<button type="submit" class="btn" name="submit">Отправить</button>
@@ -186,9 +204,12 @@
 			<div class="modal__line">
 				<input type="tel" name="phone" required placeholder="Введите ваш телефон">
 			</div>
+			<div class="modal__line">
+				<input type="email" name="mail" required placeholder="Введите вашу почту">
+			</div>
 			<div class="modal__line--checkbox">
 				<input type="checkbox" name="checkbox" id="checkbox7" value="" required>
-				<label for="checkbox7">Я принимаю и даю согласие на храниние и обработку персональных данных </label>
+				<label for="checkbox7">Принимаю политику конфиденциальности и даю согласие на хранение и обработку персональных данных </label>
 			</div>
 			<div class="modal__line">
 				<button type="submit" class="btn" name="submit">Отправить</button>
@@ -214,12 +235,15 @@
 			<div class="modal__line">
 				<input type="tel" name="phone" required placeholder="Введите ваш телефон">
 			</div>
+			<div class="modal__line">
+				<input type="email" name="mail" required placeholder="Введите вашу почту">
+			</div>
 			<div class="modal__line--textarea">
 				<textarea name="comment" id="textarea" placeholder="Напишите Ваш вопрос"></textarea>
 			</div>
 			<div class="modal__line--checkbox">
 				<input type="checkbox" name="checkbox" id="checkbox8" value="" required>
-				<label for="checkbox8">Я принимаю и даю согласие на храниние и обработку персональных данных </label>
+				<label for="checkbox8">Принимаю политику конфиденциальности и даю согласие на хранение и обработку персональных данных </label>
 			</div>
 			<div class="modal__line">
 				<button type="submit" class="btn" name="submit">Отправить</button>

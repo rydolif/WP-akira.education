@@ -10,7 +10,7 @@
 	</div>
 	<div class="advantages__item">
 		<h3>5+</h3>
-		<p>года <br>практики</p>
+		<p>лет <br>практики</p>
 	</div>
 	<div class="advantages__item">
 		<h3>100+</h3>

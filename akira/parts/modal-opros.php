@@ -23,7 +23,7 @@
 						<div class="modal--opros__line">
 							<div class="modal__line--checkbox">
 								<input type="checkbox" name="one2" id="one2" value="Хочу вступить в ассоциацию и участвовать в олимпиадах, вебинарах и т.д.">
-								<label for="one2">хочу вступить в ассоциацию и участвовать в олимпиадах, вебинарах и т.д.</label>
+								<label for="one2">Xочу вступить в ассоциацию и участвовать в олимпиадах, вебинарах и т.д.</label>
 							</div>
 						</div>
 

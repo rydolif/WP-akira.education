@@ -11,6 +11,7 @@
 		<div class="parallax parallax--circle--light parallax--sped-four parallax--position-six"></div>
 		<div class="parallax parallax--circle--white parallax--sped-five parallax--position-five"></div>
 		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/cube.svg" alt="" class="parallax parallax--sped-five parallax--position-four parallax--width-norm">
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/cube.svg" alt="" class="parallax parallax--sped-five parallax--position-six parallax--width-norm" style="left: 85%; top: 25%;">
 		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/percent.png" alt="" class="parallax parallax--num-left">
 
 		<div class="container">
@@ -23,7 +24,7 @@
 						<svg><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:logo"></svg>
 					</div>
 
-					<a href="#" class="btn hero__btn order_open">начать обучение <span><svg><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:arrow"></use></svg></span></a>
+					<a href="№" class="btn hero__btn training_open">начать обучение <span><svg><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:arrow"></use></svg></span></a>
 
 				</div>
 
@@ -97,27 +98,27 @@
 				<div class="techniques__item">
 					<svg class="techniques__item_svg"><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:abacus"></use></svg>
 					<p>ментальная <br> арифметика</p>
-					<a href="#" class="btn btn--accent-dark presentation_open">получить<br> презентацию <svg><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:arrow"></use></svg></a>
+					<a href="http://akira.education/mentalnaja-arifmetika/" class="btn btn--accent-dark">подробнее<svg><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:arrow"></use></svg></a>
 				</div>
 				<div class="techniques__item">
 					<svg class="techniques__item_svg"><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:books"></use></svg>
 					<p>скорочтение</p>
-					<a href="#" class="btn btn--accent-dark presentation_open">получить<br> презентацию <svg><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:arrow"></use></svg></a>
+					<a href="http://akira.education/skorochtenie/" class="btn btn--accent-dark">подробнее<svg><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:arrow"></use></svg></a>
 				</div>
 				<div class="techniques__item">
 					<svg class="techniques__item_svg"><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:calligraphy"></use></svg>
 					<p>каллиграфия</p>
-					<a href="#" class="btn btn--accent-dark presentation_open">получить<br> презентацию <svg><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:arrow"></use></svg></a>
+					<a href="http://akira.education/kaligrafija/" class="btn btn--accent-dark">подробнее<svg><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:arrow"></use></svg></a>
 				</div>
 				<div class="techniques__item">
 					<svg class="techniques__item_svg"><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:emocional"></use></svg>
 					<p>эмоциональный <br> интеллект</p>
-					<a href="#" class="btn btn--accent-dark presentation_open">получить<br> презентацию <svg><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:arrow"></use></svg></a>
+					<a href="http://akira.education/skorochtenie/" class="btn btn--accent-dark">подробнее<svg><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:arrow"></use></svg></a>
 				</div>
 				<div class="techniques__item">
 					<svg class="techniques__item_svg"><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:memory"></use></svg>
 					<p>эйдетика и <br> мнемотехника</p>
-					<a href="#" class="btn btn--accent-dark presentation_open">получить<br> презентацию <svg><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:arrow"></use></svg></a>
+					<a href="http://akira.education/skorochtenie/" class="btn btn--accent-dark">подробнее<svg><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:arrow"></use></svg></a>
 				</div>
 
 			</div>
@@ -167,7 +168,7 @@
 			<div class="row">
 
 				<div class="col-lg-6">
-					<iframe width="1663" height="738" src="https://www.youtube.com/embed/w4VEOPP8giw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe width="1663" height="738" src="https://www.youtube.com/embed/Ui2t72YBhu4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<div class="about__soc">
 						<a href="<?php the_field('in', 'option'); ?>" target="_blank">
 							<svg><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:instagram"></use></svg>
@@ -284,7 +285,7 @@
 						<a href="#" class="btn begin__btn request_open">здесь</a>
 					</p>
 					<p>
-						Менеджер свяжеться с Вами в ближайшее время
+						Менеджер свяжется с Вами в ближайшее время
 					</p>
 				</div>
 				<div class="begin__item">
@@ -294,7 +295,7 @@
 						<span class="begin__svg_number">2</span>
 					</div>
 					<p>
-						Пройдите пробный бессплатный урок. <b>Заключаем договор</b> и Вы знакомитесь с офертой на сайте
+						Пройдите пробный бесплатный урок. <b>Заключаем договор</b> или Вы знакомитесь с офертой на сайте
 					</p>
 				</div>
 				<div class="begin__item">
@@ -304,7 +305,7 @@
 						<span class="begin__svg_number">3</span>
 					</div>
 					<p>
-						<b>Оплата</b>. Вы получаете доступ к материалам курса и нрафик обучения
+						<b>Оплата</b>. Вы получаете доступ к материалам курса и график обучения
 					</p>
 				</div>
 				<div class="begin__item">
@@ -532,7 +533,7 @@
 			<h3><span>Не нашли ответ на интересующий Ваш вопрос? </span></h3>
 			<div class="info__container">
 				<h3>Задайте свой вопрос нам! </h3>
-				<a href="#" class="btn sing_open">Задать вопрос  <span><svg><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:arrow"></use></svg></span></a>
+				<a href="#" class="btn sing_open">Задать опрос  <span><svg><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:arrow"></use></svg></span></a>
 			</div>
 		</div>
 	</section>
@@ -544,28 +545,20 @@
 			
 			<div class="section__title">
 				<h2>наши партнеры</h2>
-				<a href="<?php echo get_home_url(); ?>/parnery" class="btn btn--franchise" target="_blank">Все партнеры</a>
+				<a href="<?php echo get_home_url(); ?>/parnery" class="btn btn--franchise">Все партнеры</a>
 			</div>
 
-			<?php if( have_rows('partners') ): ?>
-
-				<div class="partners__slider">
-
-				<?php while( have_rows('partners') ): the_row(); 
-
-					$image = get_sub_field('img');
-
-					?>
-					
-						<div class="partners__item">
-							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>">
-						</div>
-
-				<?php endwhile; ?>
-
-				</div>
-			<?php endif; ?>
-			
+			<div class="partners__slider">
+				<div class="partners__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/partners1.jpg" alt=""></div>
+				<div class="partners__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/partners2.jpg" alt=""></div>
+				<div class="partners__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/partners3.jpg" alt=""></div>
+				<div class="partners__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/partners4.jpg" alt=""></div>
+				<div class="partners__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/partners8.png" alt=""></div>
+				<div class="partners__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/partners5.jpg" alt=""></div>
+				<div class="partners__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/partners6.jpg" alt=""></div>
+				<div class="partners__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/partners7.png" alt=""></div>
+				<div class="partners__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/partners9.png" alt=""></div>
+			</div>
 		</div>
 	</section>
 	

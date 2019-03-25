@@ -6,7 +6,7 @@
 	<?php wp_footer();?>
 	
 	<?php get_template_part( 'parts/number-js' ); ?>
-	
+
 	<script>
 		var swiper = new Swiper('.swiper-container', {
 	       pagination: {
@@ -23,5 +23,6 @@
 	       effect: 'fade',
 	     });
 	</script>
+	
 </body>
 </html>

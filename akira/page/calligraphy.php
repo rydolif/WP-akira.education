@@ -33,7 +33,7 @@
 
 				<div class="offset-lg-3 col-lg-6">
 					<div class="curse--video__container">
-						<iframe width="1663" height="738" src="https://www.youtube.com/embed/w4VEOPP8giw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/kFSXn-386zY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
 				</div>
 
@@ -79,7 +79,7 @@
 						Каллиграфии:
 					</h3>
 					<ul>
-						<li>Освоить методы овладения навыком красивого письма, </li>
+						<li>Освоить методы овладения навыком красивого письма </li>
 						<li>Получить сертификат преподавателя, инструктора тренеров каллиграфии от международной ассоциации</li>
 						<li>Получить рекомендации для трудоустройства и возможность стать сотрудником «AKIRA Education»</li>
 					</ul>
@@ -87,8 +87,8 @@
 				<div class="curse--step__item">
 					<div class="curse--step__item_number">3</div>
 					<h3>
-						<b>СТАТЬ ПРЕПОДАВАТЕЛЕМ </b>
-						Каллиграфии:
+						<b>ПРОЙТИ КУРС КРАСИВОГО ПИСЬМА</b>
+						для себя:
 					</h3>
 					<ul>
 						<li>Стать тренером каллиграфии</li>
@@ -179,7 +179,7 @@
 						<h4>ДОСТУП К <br>ОБРАЗОВАТЕЛЬНОЙ<br> СРЕДЕ «AKIRA Education»</h4>
 					</div>
 					<p>
-						Вам будет открыт доступ к учебному порталу, онлайн-чату выпускников, доступ к функционалу "Akira Smart". Протестировать образовательную инфраструктуру сейчас (ведет в тестовый кабинет).
+						Вам будет открыт доступ к учебному порталу, онлайн-чату выпускников, доступ к функционалу "Akira Smart". Протестировать образовательную инфраструктуру сейчас.
 					</p>
 					<a href="#" class="btn btn--curse--advantages sing_open"> протестировать <br>образовательную среду</a>
 				</div>
@@ -236,7 +236,7 @@
 						<h3><span>Оставьте свой email и</span></h3>
 						<a href="#" class="btn modal-mail_open">Ваш Email <span><svg><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:arrow"></use></svg></span></a>
 					</div>
-					<h3><b>получите доступ к вебинару по ментальной арифметике абсолютно бесплатно!</b></h3>
+					<h3><b>получите доступ к вебинару по каллиграфии абсолютно бесплатно!</b></h3>
 				</div>
 			</div>
 		</div>
@@ -288,19 +288,6 @@
 	</section>
 
 	<?php get_template_part( 'parts/section-graduates' ); ?>
-
-	<section class="info--mail info section">
-		<span class="parallax parallax--num parallax--num-left">?</span>
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/percent.png" alt="" class="parallax parallax--num parallax--num-right">
-
-		<div class="container">
-			<div class="info__container">
-				<h3>Готовы начать??? </h3>
-				<a href="#" class="btn opros_open">Пройдите опрос  <span><svg><use xlink:href="/wp-content/plugins/svg-spritemap/defs.svg#:arrow"></use></svg></span></a>
-			</div>
-			<h3><span>пройдите обучение в  </span>“akira education” !!!</h3>
-		</div>
-	</section>
 
 	<?php get_template_part( 'parts/section-question' ); ?>
 

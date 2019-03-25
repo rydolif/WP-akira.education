@@ -17,8 +17,8 @@
 
 					<?php if( have_rows('list') ): ?>
 
-						<div class="price--content__list">
-
+						<div class="price--content__slider">
+			
 							<?php while( have_rows('list') ): the_row(); 
 
 								$link = get_sub_field('link');
@@ -27,9 +27,12 @@
 								$time = get_sub_field('time');
 								$text = get_sub_field('text');
 								$program = get_sub_field('program');
+								$id = get_sub_field('id');
 
 								?>
+
 									<div class="price--content__item">
+
 										<div class="price--content__item_header">
 											<h3><?php echo $title; ?></h3>
 											<p><?php echo $time; ?></p>
@@ -38,19 +41,25 @@
 											<div class="price--content__item_main--price"><?php echo $price; ?></div>
 											<?php echo $text; ?>
 
-											<div class="box">
-												<div class="box__header">
-													<span></span>
-													<p><b>Программа курса</b></p>
-												</div>
-												<div class="box__content">
-												  <p>
-													<?php echo $program; ?>
-												  </p>
-												</div>
-											</div>
+											<a href="#" class="<?php echo $id; ?>_open link--modal"><b>Программа курса</b></a>
 
-											<a href="<?php echo $link; ?>" class="btn btn--franchise"  target="_blank">купить <b></b></a>
+											<a href="<?php echo $link; ?>" class="btn btn--franchise" target="_blank">купить <b></b></a>
+										</div>
+									</div>
+
+									<div class="modal modal--text" id="<?php echo $id; ?>">
+										<div class="wrapper">
+											<form action="sendmail.php" class="form" method="post">
+
+												<button class="close <?php echo $id; ?>_close" type="button"></button>
+												
+												<h3><b><?php echo $title; ?></b></h3>
+
+												<p>
+													<?php echo $program; ?>
+												</p>
+
+											</form>
 										</div>
 									</div>
 

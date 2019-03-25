@@ -27,7 +27,6 @@
 					<h3>контакты</h3>
 					<p>
 						г. Алматы, ул. Жандосова д. 58
-						<a href="<?php the_field('location_map', 'option'); ?>" target="_blank" class="footer__link">Показать на карте</a>
 					</p>
 					<a href="tel:<?php the_field('tel', 'option'); ?>" class="footer__link"><?php the_field('tel', 'option'); ?></a>
 					<a href="mailto:<?php the_field('email', 'option'); ?>" class="footer__link"><?php the_field('email', 'option'); ?></a>

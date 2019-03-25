@@ -32,3 +32,104 @@
 .price--content__item_main::before {
 	opacity: 1;
 }
+
+@media only screen and (max-width: 1200px){
+	.course .filters {
+	    padding: 25px !important;
+
+	}
+	.course__grid_text {
+	    font-size: 14px;
+    	line-height: 1.2;
+    }
+    .modal--opros__item--final h4 {
+	    font-size: 14px;
+	    margin-bottom: 15px;
+	}
+	.modal--opros__item--final .modal__line {
+		margin-bottom: 10px;
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.modal {
+	    padding: 25px;
+	    max-width: 570px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.swiper-pagination-bullet {
+		width: 10px;
+	    height: 10px;
+	    font-size: 16px;
+	}
+	.modal--opros__item--final h2 {
+	    font-size: 20px;
+	    margin-bottom: 10px;
+	}
+	.modal--opros__line {
+		width: 100%;
+	}
+	.modal .close{
+		width: 20px;
+		height: 20px;
+	}
+	.modal--opros__item {
+		height: 500px;
+	}
+}
+.modal {
+	max-height: 20px 0;
+}
+
+.modal--text{
+	padding: 25px;
+}
+
+.link--modal {
+	display: block;
+	margin: 20px 0;
+	cursor: pointer;
+	color: #9247c3;
+	text-transform: uppercase;
+}
+
+.link--modal::before {
+	bottom: 0;
+}
+
+.price--content__item_main--price {
+	background: #fff;
+}
+
+@media only screen and (max-width: 992px) {
+	.price--content__item_main--price {
+	    color: #4cddee;
+	}
+}
+
+
+.flipster__item__content .text {
+	background: #f43ddb;
+}
+
+
+
+.parallax--sped-seven {
+	animation: parallax 20s linear infinite;
+}
+.parallax--sped-six {
+	animation: parallax 25s linear infinite;
+}
+.parallax--sped-five {
+	animation: parallax 30s linear infinite;
+}
+.parallax--sped-four {
+	animation: parallax 35s linear infinite;
+}
+
+
+.techniques__item:focus .btn, .techniques__item:hover .btn {
+	line-height: 32px;
+}

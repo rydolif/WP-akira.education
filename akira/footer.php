@@ -6,7 +6,7 @@
 	<?php wp_footer();?>
 	
 	<script>
-		var swiper = new Swiper('.swiper-container', {
+		var swiper = new Swiper('.modal--opros__slider', {
 	       pagination: {
 	         el: '.swiper-pagination',
 	         clickable: true,
@@ -21,6 +21,7 @@
 	       effect: 'fade',
 	     });
 	</script>
+
 
 </body>
 </html>
